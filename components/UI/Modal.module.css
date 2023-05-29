@@ -1,0 +1,12 @@
+.modal {
+    background: whitesmoke;
+    position: relative;
+    z-index: 2;
+    border-radius: .4rem;
+    padding: 2rem;
+    min-width: 50vw;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
