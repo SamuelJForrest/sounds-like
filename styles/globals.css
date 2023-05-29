@@ -1,3 +1,12 @@
+:root {
+    --color-yellow: #E8D028;
+    --color-yellow-dark: #978c37;
+    --color-red: #F8332D;
+    --color-red-dark: #921e1a;
+    --color-black: #131313;
+    --color-white: #FCFCFC;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,4 +20,9 @@ body {
     align-items: center;
     min-height: 100vh;
     min-width: 100vw;
+}
+
+h1,
+p {
+    margin-bottom: 1rem;
 }

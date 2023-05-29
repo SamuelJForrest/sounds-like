@@ -3,10 +3,16 @@
     position: relative;
     z-index: 2;
     border-radius: .4rem;
-    padding: 2rem;
-    min-width: 50vw;
+    padding: 5rem 2rem;
+    width: 50vw;
     min-height: 50vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+}
+
+.modal p {
+    max-width: 75%;
 }

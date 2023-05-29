@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Snowfall from 'react-snowfall'
@@ -7,7 +6,10 @@ import Snowfall from 'react-snowfall'
 import Overlay from '../components/UI/Overlay';
 import Modal from '../components/UI/Modal';
 
+import Intro from '../components/sections/Intro';
+
 const inter = Inter({ subsets: ['latin'] })
+const snowFlakeSpeed = [0.25, 0.5];
 
 export default function Home() {
   return (
@@ -18,11 +20,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main} ${inter.className}`}>
-        <Snowfall />
+      <main className={`${inter.className}`}>
+        <Snowfall speed={snowFlakeSpeed} />
         <Overlay />
         <Modal>
-            <h1>What does it sound like?</h1>
+            <Intro />
         </Modal>
       </main>
     </>
