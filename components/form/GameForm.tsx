@@ -3,7 +3,7 @@ import style from "./GameForm.module.css";
 
 import WarmupRoundForm from "./WarmupRoundForm";
 
-const GameForm = (props) => {
+const GameForm: React.FC = (props) => {
 	const [formPage, setFormPage] = useState<number>(0);
 
 	return (
