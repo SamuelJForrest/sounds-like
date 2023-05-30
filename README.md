@@ -12,6 +12,8 @@ List of words/clues, team has to get through as many as possible.
 
 ### Write a setup/punchline
 
+### Sounds like buzzer round
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
