@@ -1,14 +1,16 @@
-import { useState } from 'react';
+import { useState } from "react";
+import style from "./GameForm.module.css";
+
+import WarmupRoundForm from "./WarmupRoundForm";
 
 const GameForm = (props) => {
-    const [formPage, setFormPage] = useState<number>(0);
+	const [formPage, setFormPage] = useState<number>(0);
 
-    return (
-        <form method="">
-            <label htmlFor="text">Text</label>
-            <input type="text" name="text" id="text" />
-        </form>
-    )
-}
+	return (
+		<form method="" className={style.form}>
+			{formPage === 0 && <WarmupRoundForm />}
+		</form>
+	);
+};
 
 export default GameForm;
