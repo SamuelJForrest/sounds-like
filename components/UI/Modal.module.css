@@ -16,3 +16,20 @@
 .modal p {
     max-width: 75%;
 }
+
+.modal-home-btn {
+    color: var(--color-white);
+    background: var(--color-black);
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: .4rem 0 .4rem 0;
+    transition: all .3s;
+}
+
+.modal-home-btn:hover,
+.modal-home-btn:focus {
+    color: var(--color-yellow);
+}

@@ -1,3 +1,4 @@
+import { useState } from 'react'; 
 import useMultistepForm from '../../hooks/useMultistepForm';
 import style from './GameForm.module.css';
 import buttonStyle from '../UI/Button.module.css';
@@ -6,29 +7,48 @@ import PunchlineForm from './PunchlineForm';
 import QuickfireForm from './QuickfireForm';
 import SoundsLikeForm from './SoundsLikeForm';
 import WarmupForm from './WarmupForm';
-
-const formPages = [
-    <WarmupForm />, 
-    <QuickfireForm />, 
-    <PunchlineForm />, 
-    <SoundsLikeForm />
-];
+import { FormData, INITIAL_DATA } from './FormData';
 
 const GameForm = () => {
+    const [data, setData] = useState(INITIAL_DATA);
+
+    const updateFields = (fields: Partial<FormData>) => {
+        setData(prevData => {
+            return {...prevData, ...fields};
+        })
+    }
+    
+    const formPages = [
+        <WarmupForm data={...data} updateFields={updateFields} />, 
+        <QuickfireForm />, 
+        <PunchlineForm />, 
+        <SoundsLikeForm />
+    ];
+
     const { step, steps, currentStepIndex, isFirstStep, isLastStep, back, next } = useMultistepForm(formPages);
+
+    const onSubmit = (e: FormEvent) => {
+        e.preventDefault();
+        next();
+    }
     
     return (
         <>
             <div className={style['gameform-count']}>
                 <p>{ currentStepIndex + 1 } / {steps.length}</p>
             </div>
-            <form action="">
+            <form action="" className={style.gameform} onSubmit={onSubmit}>
                 {step}
                 <div className={style['gameform-buttons']}>
                     { !isFirstStep && <button type="button" className={buttonStyle['button--yellow']} onClick={back}>Back</button>}
-                    <button type="button" onClick={next} className={buttonStyle['button--red']}>
+                    <button type="submit" className={buttonStyle['button--red']}>
                         { isLastStep ? 'Start Game' : 'Next' }
                     </button>
+                    
+                    {/* Testing button */}
+                    {/* <button type="button" onClick={next} className={buttonStyle['button--red']}>
+                        Next page
+                    </button> */}
                 </div>
             </form>
         </>

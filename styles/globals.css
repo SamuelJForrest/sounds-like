@@ -3,6 +3,7 @@
     --color-yellow-dark: #978c37;
     --color-red: #F8332D;
     --color-red-dark: #921e1a;
+    --color-blue: #3B82F6;
     --color-black: #131313;
     --color-white: #FCFCFC;
 }
@@ -23,7 +24,6 @@ body {
 }
 
 h1,
-h2,
 p {
     margin-bottom: 1rem;
 }

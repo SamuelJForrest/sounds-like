@@ -4,3 +4,7 @@
     justify-content: flex-start;
     align-items: center;
 }
+
+.form-wrapper h2 {
+    margin-bottom: 1.6rem;
+}

@@ -1,0 +1,25 @@
+.field_wrap {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.2rem;
+}
+
+.field_wrap label {
+    display: inline-block;
+    margin-bottom: .4rem;
+    font-weight: 500;
+}
+
+.field_wrap input {
+    padding: .6rem 1rem;
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: .8rem;
+}
+
+.input_wrap {
+    flex: 1;
+}
