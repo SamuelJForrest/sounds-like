@@ -46,9 +46,9 @@ const GameForm = () => {
                     </button>
                     
                     {/* Testing button */}
-                    {/* <button type="button" onClick={next} className={buttonStyle['button--red']}>
+                    <button type="button" onClick={next}>
                         Next page
-                    </button> */}
+                    </button>
                 </div>
             </form>
         </>
