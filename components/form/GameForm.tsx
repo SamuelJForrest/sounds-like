@@ -19,7 +19,7 @@ const GameForm = () => {
     }
     
     const formPages = [
-        <WarmupForm data={...data} updateFields={updateFields} />, 
+        <WarmupForm data={data} updateFields={updateFields} />, 
         <QuickfireForm />, 
         <PunchlineForm />, 
         <SoundsLikeForm />
