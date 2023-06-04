@@ -19,7 +19,7 @@ type UserFormProps = UserData & {
     updateFields: (fields: Partial<UserData>) => void
 }
 
-const WarmupForm = (props: UserFormProps) => {
+const WarmupForm = (props: Partial<UserFormProps>) => {
     const {
         warmupOne,
         warmupTwo,

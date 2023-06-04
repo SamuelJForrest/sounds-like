@@ -17,9 +17,7 @@ const GameForm = () => {
             return {...prevData, ...fields};
         })
     }
-    
-    console.log(data);
-    
+        
     const formPages = [
         <WarmupForm data={data} updateFields={updateFields} />, 
         <QuickfireForm data={data} updateFields={updateFields} team='red' />, 
@@ -32,6 +30,7 @@ const GameForm = () => {
 
     const onSubmit = (e: FormEvent) => {
         e.preventDefault();
+        console.log(data);
         next();
     }
     
