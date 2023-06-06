@@ -3,18 +3,24 @@ import { ReactElement, useState } from 'react';
 const useMultistepForm = (steps: ReactElement[]) => {
     const [currentStepIndex, setCurrentStepIndex] = useState<number>(0);
 
+    const scrollToTop = () => {
+        return window.scrollTo(0, 0);
+    }
+
     const next = () => {
         setCurrentStepIndex(currIndex => {
             if (currIndex >= steps.length - 1) return currIndex;
 
+            scrollToTop();
             return currIndex + 1;
         })
     }
-
+    
     const back = () => {
         setCurrentStepIndex(currIndex => {
             if (currIndex <= 0) return currIndex;
-
+            
+            scrollToTop();
             return currIndex - 1;
         })
     }
