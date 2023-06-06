@@ -15,9 +15,11 @@ const GameForm = () => {
     const updateFields = (fields: Partial<FormData>) => {
         setData(prevData => {
             return {...prevData, ...fields};
-        })
+        });
     }
-        
+    
+    console.log(data);
+    
     const formPages = [
         <WarmupForm data={data} updateFields={updateFields} />, 
         <QuickfireForm data={data} updateFields={updateFields} team='red' />, 

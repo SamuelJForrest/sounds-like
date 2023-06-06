@@ -4,13 +4,14 @@
     z-index: 2;
     border-radius: .4rem;
     padding: 5rem 2rem;
-    width: 50vw;
+    width: 75vw;
     min-height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin: 5rem 0;
 }
 
 .modal p {

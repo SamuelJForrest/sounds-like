@@ -4,7 +4,9 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 1.2rem;
+    flex-wrap: wrap;
+    gap: 0 1.2rem;
+    margin-bottom: 1.6rem;
 }
 
 .field_wrap label {
@@ -17,7 +19,13 @@
     padding: .6rem 1rem;
     width: 100%;
     font-size: 1rem;
-    margin-bottom: .8rem;
+}
+
+.field_wrap .input_wrap:nth-of-type(3n) {
+    flex: 1 1 100%;
+    padding-bottom: 1.6rem;
+    padding-top: .8rem;
+    border-bottom: 1px solid rgba(155, 155, 155, 0.4);
 }
 
 .input_wrap {
